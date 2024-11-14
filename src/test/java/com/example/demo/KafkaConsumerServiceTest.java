@@ -24,7 +24,7 @@ public class KafkaConsumerServiceTest {
     private CreditCheckService creditCheckService;
 
     @BeforeEach
-    public void setUp() throws JsonProcessingException {
+    public void setUp() {
 
         testMessage = "{\"phoneNumber\":1234567890, \"salary\":50000, \"totalCard\":3}";
 

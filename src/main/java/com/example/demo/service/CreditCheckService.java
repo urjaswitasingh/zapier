@@ -47,7 +47,7 @@ public class CreditCheckService {
             kafkaProducerService.sendMessage(creditScoreReceiveMessage);
         }
     }
-    private int generateCreditScore(double annualSalary, int numCreditCards) {
+    public int generateCreditScore(double annualSalary, int numCreditCards) {
         int creditScore = 0;
 
         // Rule 1: Number of credit cards
