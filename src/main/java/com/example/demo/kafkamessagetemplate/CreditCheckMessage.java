@@ -14,4 +14,5 @@ import org.springframework.stereotype.Component;
 public class CreditCheckMessage {
     long phoneNumber;
     int salary;
+    int totalCard;
 }
