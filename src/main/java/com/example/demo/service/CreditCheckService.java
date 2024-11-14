@@ -44,7 +44,6 @@ public class CreditCheckService {
             creditScoreReceiveMessage.setCreditScore(creditScore.getCreditScore());
             creditScoreReceiveMessage.setPhoneNumber(creditCheckMessage.getPhoneNumber());
             kafkaProducerService.sendMessage(creditScoreReceiveMessage);
-            System.out.println( "Credit score already exists for phone number: " + creditCheckMessage.getPhoneNumber());
         }
     }
     private int generateCreditScore(double annualSalary, int numCreditCards) {
