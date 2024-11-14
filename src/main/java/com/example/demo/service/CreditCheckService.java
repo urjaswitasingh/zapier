@@ -28,9 +28,10 @@ public class CreditCheckService {
         // if credit score does not exist, generate credit score and save it
         if (creditScore == null) {
             int generatedScore = generateCreditScore(creditCheckMessage.getSalary(), creditCheckMessage.getTotalCard());
-            creditScore.setCreditScore(generatedScore);
-            creditScore.setPhoneNumber(creditCheckMessage.getPhoneNumber());
-            creditScoreRepo.save(creditScore);
+            CreditScore newCreditScore = new CreditScore();
+            newCreditScore.setCreditScore(generatedScore);
+            newCreditScore.setPhoneNumber(creditCheckMessage.getPhoneNumber());
+            creditScoreRepo.save(newCreditScore);
 
             // send credit score to kafka
             CreditScoreReceiveMessage creditScoreReceiveMessage = new CreditScoreReceiveMessage();
