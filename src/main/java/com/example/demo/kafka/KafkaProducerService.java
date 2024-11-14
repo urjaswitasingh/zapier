@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class KafkaProducerService {
-    private static final String TOPIC = "credit-check";
+    private static final String TOPIC = "send-credit";
     @Autowired
     private KafkaTemplate<String, Object> kafkaTemplate;
     public void sendMessage(CreditScoreReceiveMessage message){
